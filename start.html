@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Getting Started &mdash; Domain Trails alpha documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="domain-trails" href="modules.html" />
+    <link rel="prev" title="domain-trails" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Domain Trails
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Tutorial</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#preparing-installation">Preparing installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cloning-project">Cloning Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#executing-project">Executing Project</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#supported-modules">Supported Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#domain-availability-check">☑️Domain Availability Check</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#domain-hosting-history">📜️Domain Hosting History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#domain-dns-information">📇️️Domain DNS Information</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Code Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">domain-trails</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Domain Trails</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Getting Started</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/start.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline"></a></h1>
+<p>Domain tails is python tool based on free available sources
+for domain information collection.</p>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
+<section id="preparing-installation">
+<h3>Preparing installation<a class="headerlink" href="#preparing-installation" title="Permalink to this headline"></a></h3>
+<p>Install python3 on system. Currently project has zero external
+dependency verify python version:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">V</span>
+<span class="n">Python</span> <span class="mf">3.6.8</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Project is currently supported with python3+ versions.</p>
+</div>
+</section>
+<section id="cloning-project">
+<h3>Cloning Project<a class="headerlink" href="#cloning-project" title="Permalink to this headline"></a></h3>
+<p>Clone repo on system / server:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">iAbdullahMughal</span><span class="o">/</span><span class="n">domain</span><span class="o">-</span><span class="n">trails</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>Your file system should now look similar to this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>domain-trails
+├── docs
+├── LICENSE
+├── README.md
+├── portal.py
+├── setup.py
+└── core
+    ├── parser
+    ├── recon
+    ├── __init__.py
+    └── resources.py
+</pre></div>
+</div>
+<p>We have a top-level <code class="docutils literal notranslate"><span class="pre">portal.py</span></code> directory in the main project directory.
+.. warning:: Project directory structure may change.</p>
+</section>
+<section id="executing-project">
+<h3>Executing Project<a class="headerlink" href="#executing-project" title="Permalink to this headline"></a></h3>
+<p>Project without parameters:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>python .\portal.py
+-------------------------------------------------------------------------------
+      ____                            _           ______              _  __
+     / __ \ ____   ____ ___   ____ _ (_)____     /_  __/_____ ____ _ (_)/ /_____
+    / / / // __ \ / __ `__ \ / __ `// // __ \     / /  / ___// __ `// // // ___/
+   / /_/ // /_/ // / / / / // /_/ // // / / /    / /  / /   / /_/ // // /(__  )
+  /_____/ \____//_/ /_/ /_/ \__,_//_//_/ /_/    /_/  /_/    \__,_//_//_//____/
+  -------------------------------------------------------------------------------
+    Domain Trails - domains footprints, reconnaissance &amp; information gathering
+  -------------------------------------------------------------------------------
+usage: portal.py [-h] -d DOMAIN
+portal.py: error: the following arguments are required: -d
+</pre></div>
+</div>
+<p>Run project with parameter:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>python .\portal.py -d www.google.com
+-------------------------------------------------------------------------------
+      ____                            _           ______              _  __
+     / __ \ ____   ____ ___   ____ _ (_)____     /_  __/_____ ____ _ (_)/ /_____
+    / / / // __ \ / __ `__ \ / __ `// // __ \     / /  / ___// __ `// // // ___/
+   / /_/ // /_/ // / / / / // /_/ // // / / /    / /  / /   / /_/ // // /(__  )
+  /_____/ \____//_/ /_/ /_/ \__,_//_//_/ /_/    /_/  /_/    \__,_//_//_//____/
+  -------------------------------------------------------------------------------
+    Domain Trails - domains footprints, reconnaissance &amp; information gathering
+  -------------------------------------------------------------------------------
+  Printing Results for domain www.google.com
+</pre></div>
+</div>
+</section>
+</section>
+<section id="supported-modules">
+<h2>Supported Modules<a class="headerlink" href="#supported-modules" title="Permalink to this headline"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Actively adding more modules for more coverage.</p>
+</div>
+<p>Following modules are supported in domain trails</p>
+<section id="domain-availability-check">
+<h3>☑️Domain Availability Check<a class="headerlink" href="#domain-availability-check" title="Permalink to this headline"></a></h3>
+<p>Output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Domain</span> <span class="n">Availability</span> <span class="n">Result</span> <span class="k">for</span> <span class="n">www</span><span class="o">.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span> <span class="p">:</span> <span class="n">Domain</span> <span class="ow">is</span> <span class="n">Registered</span>
+</pre></div>
+</div>
+</section>
+<section id="domain-hosting-history">
+<h3>📜️Domain Hosting History<a class="headerlink" href="#domain-hosting-history" title="Permalink to this headline"></a></h3>
+<p>Output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DNS</span> <span class="n">History</span> <span class="n">Records</span>
+
+<span class="n">Old</span> <span class="n">Web</span> <span class="n">Host</span>  <span class="n">New</span> <span class="n">Web</span> <span class="n">Host</span>  <span class="n">Month</span> <span class="o">/</span> <span class="n">Year</span>   <span class="n">Zone</span> <span class="n">Date</span>  <span class="n">Transaction</span>
+<span class="o">------------</span>  <span class="o">------------</span>  <span class="o">-------------</span>  <span class="o">---------</span>  <span class="o">-----------</span>
+<span class="n">google</span><span class="o">.</span><span class="n">com</span>    <span class="n">n</span><span class="o">/</span><span class="n">a</span>           <span class="n">december</span> <span class="mi">2000</span>             <span class="n">epoch</span>
+</pre></div>
+</div>
+</section>
+<section id="domain-dns-information">
+<h3>📇️️Domain DNS Information<a class="headerlink" href="#domain-dns-information" title="Permalink to this headline"></a></h3>
+<p>Output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IP</span> <span class="n">v6</span> <span class="n">Records</span>
+
+<span class="n">name</span>         <span class="nb">type</span>  <span class="k">class</span>  <span class="nc">ttl</span>  <span class="n">endpoint</span>
+<span class="o">-----------</span>  <span class="o">----</span>  <span class="o">-----</span>  <span class="o">---</span>  <span class="o">------------------------</span>
+<span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>  <span class="n">AAAA</span>  <span class="n">IN</span>     <span class="mi">300</span>  <span class="mi">2607</span><span class="p">:</span><span class="n">f8b0</span><span class="p">:</span><span class="mi">4006</span><span class="p">:</span><span class="mi">817</span><span class="p">::</span><span class="mi">200</span><span class="n">e</span>
+
+<span class="n">Mail</span> <span class="n">eXchanger</span> <span class="p">(</span><span class="n">MX</span><span class="p">)</span> <span class="n">Records</span>
+
+<span class="n">name</span>         <span class="nb">type</span>  <span class="k">class</span>  <span class="nc">ttl</span>  <span class="n">endpoint</span>
+<span class="o">-----------</span>  <span class="o">----</span>  <span class="o">-----</span>  <span class="o">---</span>  <span class="o">---------------------------</span>
+<span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>  <span class="n">MX</span>    <span class="n">IN</span>     <span class="mi">600</span>  <span class="mi">30</span> <span class="n">alt2</span><span class="o">.</span><span class="n">aspmx</span><span class="o">.</span><span class="n">l</span><span class="o">.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>
+<span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>  <span class="n">MX</span>    <span class="n">IN</span>     <span class="mi">600</span>  <span class="mi">50</span> <span class="n">alt4</span><span class="o">.</span><span class="n">aspmx</span><span class="o">.</span><span class="n">l</span><span class="o">.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>
+<span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>  <span class="n">MX</span>    <span class="n">IN</span>     <span class="mi">600</span>  <span class="mi">10</span> <span class="n">aspmx</span><span class="o">.</span><span class="n">l</span><span class="o">.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>
+<span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>  <span class="n">MX</span>    <span class="n">IN</span>     <span class="mi">600</span>  <span class="mi">20</span> <span class="n">alt1</span><span class="o">.</span><span class="n">aspmx</span><span class="o">.</span><span class="n">l</span><span class="o">.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>
+<span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>  <span class="n">MX</span>    <span class="n">IN</span>     <span class="mi">600</span>  <span class="mi">40</span> <span class="n">alt3</span><span class="o">.</span><span class="n">aspmx</span><span class="o">.</span><span class="n">l</span><span class="o">.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>
+
+<span class="n">Parent</span> <span class="n">Name</span> <span class="n">Server</span> <span class="n">records</span>
+
+<span class="n">name</span>         <span class="nb">type</span>  <span class="k">class</span>  <span class="nc">ttl</span>  <span class="n">endpoint</span>
+<span class="o">-----------</span>  <span class="o">----</span>  <span class="o">-----</span>  <span class="o">---</span>  <span class="o">--------------</span>
+<span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>  <span class="n">A</span>     <span class="n">IN</span>     <span class="mi">300</span>  <span class="mf">142.250.81.238</span>
+
+<span class="n">Local</span> <span class="n">Name</span> <span class="n">Server</span> <span class="n">Records</span>
+
+<span class="n">name</span>         <span class="nb">type</span>  <span class="k">class</span>  <span class="nc">ttl</span>     <span class="n">endpoint</span>
+<span class="o">-----------</span>  <span class="o">----</span>  <span class="o">-----</span>  <span class="o">------</span>  <span class="o">---------------</span>
+<span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>  <span class="n">NS</span>    <span class="n">IN</span>     <span class="mi">271654</span>  <span class="n">ns4</span><span class="o">.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>
+<span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>  <span class="n">NS</span>    <span class="n">IN</span>     <span class="mi">271654</span>  <span class="n">ns3</span><span class="o">.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>
+<span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>  <span class="n">NS</span>    <span class="n">IN</span>     <span class="mi">271654</span>  <span class="n">ns1</span><span class="o">.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>
+<span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>  <span class="n">NS</span>    <span class="n">IN</span>     <span class="mi">271654</span>  <span class="n">ns2</span><span class="o">.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>
+
+<span class="n">Start</span> <span class="n">of</span> <span class="n">Authority</span> <span class="p">(</span><span class="n">SOA</span><span class="p">)</span>
+
+<span class="n">primary_nameserver</span>  <span class="n">host_master_email</span>      <span class="n">serial_number</span>  <span class="n">refresh</span>  <span class="n">retry</span>  <span class="n">expire</span>  <span class="n">minimum_ttl</span>
+<span class="o">------------------</span>  <span class="o">---------------------</span>  <span class="o">-------------</span>  <span class="o">-------</span>  <span class="o">-----</span>  <span class="o">------</span>  <span class="o">-----------</span>
+<span class="n">ns1</span><span class="o">.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>     <span class="n">dns</span><span class="o">-</span><span class="n">admin</span><span class="o">.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>  <span class="mi">413628036</span>      <span class="mi">900</span>      <span class="mi">900</span>    <span class="mi">1800</span>    <span class="mi">60</span>
+
+<span class="n">Text</span> <span class="n">Records</span>
+
+<span class="n">name</span>         <span class="nb">type</span>  <span class="k">class</span>  <span class="nc">ttl</span>   <span class="n">endpoint</span>
+<span class="o">-----------</span>  <span class="o">----</span>  <span class="o">-----</span>  <span class="o">----</span>  <span class="o">--------------------------------------------------------------------</span>
+<span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>  <span class="n">TXT</span>   <span class="n">IN</span>     <span class="mi">3600</span>  <span class="n">facebook</span><span class="o">-</span><span class="n">domain</span><span class="o">-</span><span class="n">verification</span><span class="o">=</span><span class="mi">22</span><span class="n">rm551cu4k0ab0bxsw536tlds4h95</span>
+<span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>  <span class="n">TXT</span>   <span class="n">IN</span>     <span class="mi">3600</span>  <span class="n">google</span><span class="o">-</span><span class="n">site</span><span class="o">-</span><span class="n">verification</span><span class="o">=</span><span class="n">wD8N7i1JTNTkezJ49swvWW48f8_9xveREV4oB</span><span class="o">-</span><span class="mi">0</span><span class="n">Hf5o</span>
+<span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>  <span class="n">TXT</span>   <span class="n">IN</span>     <span class="mi">3600</span>  <span class="n">docusign</span><span class="o">=</span><span class="mi">1</span><span class="n">b0a6754</span><span class="o">-</span><span class="mi">49</span><span class="n">b1</span><span class="o">-</span><span class="mi">4</span><span class="n">db5</span><span class="o">-</span><span class="mi">8540</span><span class="o">-</span><span class="n">d2c12664b289</span>
+<span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>  <span class="n">TXT</span>   <span class="n">IN</span>     <span class="mi">3600</span>  <span class="n">globalsign</span><span class="o">-</span><span class="n">smime</span><span class="o">-</span><span class="n">dv</span><span class="o">=</span><span class="n">CDYX</span><span class="o">+</span><span class="n">XFHUw2wml6</span><span class="o">/</span><span class="n">Gb8</span><span class="o">+</span><span class="mi">59</span><span class="n">BsH31KzUr6c1l2BPvqKX8</span><span class="o">=</span>
+<span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>  <span class="n">TXT</span>   <span class="n">IN</span>     <span class="mi">3600</span>  <span class="n">google</span><span class="o">-</span><span class="n">site</span><span class="o">-</span><span class="n">verification</span><span class="o">=</span><span class="n">TV9</span><span class="o">-</span><span class="n">DBe4R80X4v0M4U_bd_J9cpOJM0nikft0jAgjmsQ</span>
+<span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>  <span class="n">TXT</span>   <span class="n">IN</span>     <span class="mi">3600</span>  <span class="s2">&quot;v=spf1 include:_spf.google.com ~all&quot;</span>
+<span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>  <span class="n">TXT</span>   <span class="n">IN</span>     <span class="mi">3600</span>  <span class="n">docusign</span><span class="o">=</span><span class="mi">05958488</span><span class="o">-</span><span class="mi">4752</span><span class="o">-</span><span class="mi">4</span><span class="n">ef2</span><span class="o">-</span><span class="mi">95</span><span class="n">eb</span><span class="o">-</span><span class="n">aa7ba8a3bd0e</span>
+<span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>  <span class="n">TXT</span>   <span class="n">IN</span>     <span class="mi">3600</span>  <span class="n">MS</span><span class="o">=</span><span class="n">E4A68B9AB2BB9670BCE15412F62916164C0B20BB</span>
+<span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>  <span class="n">TXT</span>   <span class="n">IN</span>     <span class="mi">3600</span>  <span class="n">apple</span><span class="o">-</span><span class="n">domain</span><span class="o">-</span><span class="n">verification</span><span class="o">=</span><span class="mi">30</span><span class="n">afIBcvSuDV2PLX</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Domain name records may change there</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="domain-trails" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="modules.html" class="btn btn-neutral float-right" title="domain-trails" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Muhammad Abdullah.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

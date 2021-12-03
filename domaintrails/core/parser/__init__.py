@@ -1,7 +1,5 @@
 import sys
 
-from core.parser.html_parser import DnsHistoryParser as HistoryWebParser
-
 
 class UrlParser:
     """

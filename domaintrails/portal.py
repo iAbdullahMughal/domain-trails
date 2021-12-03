@@ -2,9 +2,9 @@ import os
 import argparse
 import time
 
-from core.resources import UserDomain
-from core.parser import ColorPrint
-from core import process_request as ProcessRequest
+from domain_trails.core.resources import UserDomain
+from domain_trails.core.parser import ColorPrint
+from domain_trails.core import process_request as ProcessRequest
 
 
 def banner():

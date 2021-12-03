@@ -1,9 +1,9 @@
-from core.resources import UserDomain, UserAgent
+from domain_trails.core.resources import UserDomain
 
-from core.recon.domain_available import DomainAvailable as DomainAvailability
-from core.recon.dns_history import DnsHistory as DomainHostHistory
-from core.parser import ColorPrint
-from core.recon.dnslg import DnsLG as DomainDnsInformation
+from domain_trails.core.recon.domain_available import DomainAvailable as DomainAvailability
+from domain_trails.core.recon.dns_history import DnsHistory as DomainHostHistory
+from domain_trails.core.parser import ColorPrint
+from domain_trails.core.recon.dnslg import DnsLG as DomainDnsInformation
 
 
 def index_in_list(a_list: list, index: int):

@@ -2,9 +2,9 @@ import os
 import argparse
 import time
 
-from domain_trails.core.resources import UserDomain
-from domain_trails.core.parser import ColorPrint
-from domain_trails.core import process_request as ProcessRequest
+from domaintrails.core.resources import UserDomain
+from domaintrails.core.parser import ColorPrint
+from domaintrails.core import process_request as ProcessRequest
 
 
 def banner():
@@ -28,18 +28,26 @@ def banner():
     return banner_text
 
 
-if __name__ == '__main__':
-    os.system("")
-    ColorPrint.print_warn(banner())
-    # Just giving small amount of sleep before printing content on screen
-    time.sleep(.5)
-    parser = argparse.ArgumentParser(description="Domain Trails, a project for domain information gathering from online"
-                                                 "sources.")
-    parser.add_argument("-d", dest="domain", required=True, type=str, help="Domain address for recon operation.")
-    # parser.add_argument("-p", dest="enable_proxy", type=bool, default=False,
-    #                     help="Enable free ssl proxies while performing analysis.")
-    args = parser.parse_args()
+def main(domain: str = None) -> None:
+    if not domain:
+        os.system("")
+        ColorPrint.print_warn(banner())
+        # Just giving small amount of sleep before printing content on screen
+        time.sleep(.5)
+        parser = argparse.ArgumentParser(
+            description="Domain Trails, a project for domain information gathering from online"
+                        "sources.")
+        parser.add_argument("-d", dest="domain", required=True, type=str, help="Domain address for recon operation.")
+        # parser.add_argument("-p", dest="enable_proxy", type=bool, default=False,
+        #                     help="Enable free ssl proxies while performing analysis.")
+        args = parser.parse_args()
 
-    if args.domain:
-        UserDomain.domain = args.domain
+        if args.domain:
+            UserDomain.domain = args.domain
+    else:
+        UserDomain.domain = domain
     ProcessRequest()
+
+
+if __name__ == '__main__':
+    main()

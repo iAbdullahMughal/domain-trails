@@ -1,8 +1,8 @@
 import json
 from urllib.error import HTTPError
 
-from domain_trails.core.resources import UserDomain, UserAgent
-from domain_trails.core.parser import domain_for_md as UrlParser
+from domaintrails.core.resources import UserDomain, UserAgent
+from domaintrails.core.parser import domain_for_md as UrlParser
 from urllib.request import urlopen, Request
 from urllib.parse import urlencode
 

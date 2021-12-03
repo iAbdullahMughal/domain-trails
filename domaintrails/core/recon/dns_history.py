@@ -1,9 +1,11 @@
 import urllib
 from urllib.request import Request, urlopen
 import urllib.parse
-from domain_trails.core import UserDomain, UserAgent
 
-from domain_trails.core.parser import HistoryWebParser, domain_for_history as UrlParser
+from domaintrails.core.resources import UserAgent, UserDomain
+
+from domaintrails.core.parser.html_parser import DnsHistoryParser as HistoryWebParser
+from domaintrails.core.parser import domain_for_history as UrlParser
 
 
 class DnsHistory:

@@ -1,9 +1,9 @@
 import json
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
-from domain_trails.core import UserDomain, UserAgent
+from domaintrails.core.resources import UserDomain, UserAgent
 
-from domain_trails.core.parser import domain_for_history as UrlParser
+from domaintrails.core.parser import domain_for_history as UrlParser
 import concurrent.futures
 
 

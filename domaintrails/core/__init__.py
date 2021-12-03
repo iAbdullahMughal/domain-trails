@@ -1,9 +1,10 @@
-from domain_trails.core.resources import UserDomain
+from domaintrails.core.resources import UserDomain
 
-from domain_trails.core.recon.domain_available import DomainAvailable as DomainAvailability
-from domain_trails.core.recon.dns_history import DnsHistory as DomainHostHistory
-from domain_trails.core.parser import ColorPrint
-from domain_trails.core.recon.dnslg import DnsLG as DomainDnsInformation
+from domaintrails.core.recon.domain_available import DomainAvailable as DomainAvailability
+from domaintrails.core.recon.dns_history import DnsHistory as DomainHostHistory
+from domaintrails.core.parser import ColorPrint
+from domaintrails.core.recon.dnslg import DnsLG as DomainDnsInformation
+from domaintrails.core.resources import UserAgent
 
 
 def index_in_list(a_list: list, index: int):
@@ -88,7 +89,7 @@ def dict_to_table(dict_data: dict):
     return table_data
 
 
-def process_request():
+def process_request(domain: str = None):
     '''
     This function is responsible for calling all the configured module and services in project. Following services are
     called by the function,
@@ -99,6 +100,8 @@ def process_request():
     Function later calls printing function to display all content
 
     '''
+    if domain:
+        UserDomain.domain = domain
     domain = UserDomain.domain
 
     ColorPrint.print_bold("Printing Results for domain %s" % domain)

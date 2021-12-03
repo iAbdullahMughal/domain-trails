@@ -163,4 +163,4 @@ class ColorPrint:
         sys.stdout.write('\x1b[1;37m' + message.strip() + '\x1b[0m' + end)
 
 
-__all__ = ["HistoryWebParser", "domain_for_history", "ColorPrint", "domain_for_md"]
+__all__ = [ "domain_for_history", "ColorPrint", "domain_for_md"]

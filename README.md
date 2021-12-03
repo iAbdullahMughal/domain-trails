@@ -18,6 +18,14 @@ Starting a simple project around information gathering related to domain / url /
 for educational means, so what is in this project right now ...
 
 ## ✨ Highlights
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![PyCharm](https://img.shields.io/badge/pycharm-143?style=for-the-badge&logo=pycharm&logoColor=black&color=black&labelColor=green)
+
+Read Docs 
+
+- https://readthedocs.org/projects/domain-trails/
+- https://iabdullahmughal.github.io/domain-trails/
+
 
 Following services are supported
 
@@ -110,5 +118,8 @@ king.com.  TXT   IN     86254  atlassian-domain-verification=zgWQpzQViZLGaYL2GIW
 king.com.  TXT   IN     86254  "v=spf1 include:spf1.king.com include:spf2.king.com mx include:u8225371.wl122.sendgrid.net include:u7865735.wl236.sendgrid.net ~all"  
 
 ````
+
+## Documentation
+
 
 ### 🚧 Learning, searching, coding and hunting in progress ... 

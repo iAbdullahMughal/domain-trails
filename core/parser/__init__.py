@@ -1,3 +1,5 @@
+import sys
+
 from core.parser.html_parser import DnsHistoryParser as HistoryWebParser
 
 
@@ -15,7 +17,7 @@ class UrlParser:
         self.__url = u_url
 
     @property
-    def ROOT_URL(self):
+    def root_url(self):
         url = self.__url
         if str(url).startswith("https://"):
             url = str(url).replace("https://", "")
@@ -40,16 +42,39 @@ url_parser = UrlParser()
 
 def domain_for_md(domain):
     url_parser.url = domain
-    domain = url_parser.ROOT_URL
+    domain = url_parser.root_url
     return domain
 
 
 def domain_for_history(domain):
     url_parser.url = domain
-    domain = url_parser.ROOT_URL
+    domain = url_parser.root_url
     if domain.startswith("www."):
         domain = domain.replace("www.", "")
     return domain
 
 
-__all__ = ["HistoryWebParser"]
+class ColorPrint:
+
+    @staticmethod
+    def print_fail(message, end='\n'):
+        sys.stderr.write('\x1b[1;31m' + message.strip() + '\x1b[0m' + end)
+
+    @staticmethod
+    def print_pass(message, end='\n'):
+        sys.stdout.write('\x1b[1;32m' + message.strip() + '\x1b[0m' + end)
+
+    @staticmethod
+    def print_warn(message, end='\n'):
+        sys.stderr.write('\x1b[1;33m' + message.strip() + '\x1b[0m' + end)
+
+    @staticmethod
+    def print_info(message, end='\n'):
+        sys.stdout.write('\x1b[1;34m' + message.strip() + '\x1b[0m' + end)
+
+    @staticmethod
+    def print_bold(message, end='\n'):
+        sys.stdout.write('\x1b[1;37m' + message.strip() + '\x1b[0m' + end)
+
+
+__all__ = ["HistoryWebParser", "domain_for_history", "ColorPrint"]

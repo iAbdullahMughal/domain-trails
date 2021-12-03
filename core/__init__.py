@@ -1,21 +1,33 @@
-import json
-
 from core.resources import UserDomain, UserAgent
 
-from core.recon.domain_available import DomainAvailable as domain_availability
-from core.recon.dns_history import DnsHistory as domain_host_history
+from core.recon.domain_available import DomainAvailable as DomainAvailability
+from core.recon.dns_history import DnsHistory as DomainHostHistory
 from core.parser import ColorPrint
-from core.recon.services.dnslg import DnsLG as DnsInformation
+from core.recon.dnslg import DnsLG as DomainDnsInformation
 
 
-def index_in_list(a_list, index):
+def index_in_list(a_list: list, index: int):
+    '''
+    This function is to check if some index exists inside a list.
+    :param a_list: List of items
+    :type a_list: list
+    :param index: index pointer which needs be checked on list
+    :type index: int
+    :return: True / False
+    :rtype: bool
+    '''
     return index < len(a_list)
 
 
-def print_table(table_data):
-    if isinstance(table_data, dict):
-        table_data = table_data["records"]
-        print(table_data)
+def print_table(table_data: list):
+    '''
+    We use this function to create table for printing information on console / terminal. We will be calculating
+    column's information, separator and designing layout. After calculation this function will print information
+    on terminal.
+    :param table_data: table data in shape of list
+    :type table_data: list
+    '''
+
     sep_index = []
     for row in table_data:
         l_row = len(row)
@@ -55,7 +67,15 @@ def print_table(table_data):
         print(output_line)
 
 
-def dict_to_table(dict_data):
+def dict_to_table(dict_data: dict):
+    '''
+    This function converts dictionary data into list. This function is normally used to prepare data before printing
+    on console/ terminal.
+    :param dict_data: dictionary based data from different sources
+    :type dict_data: dict
+    :return: list based data is returned to caller
+    :rtype: list
+    '''
     table_data = []
     t_keys = []
     for row in dict_data:
@@ -68,12 +88,22 @@ def dict_to_table(dict_data):
     return table_data
 
 
-def ProcessRequest():
-    domain = UserDomain.DOMAIN
+def process_request():
+    '''
+    This function is responsible for calling all the configured module and services in project. Following services are
+    called by the function,
+    1. DomainAvailability
+    2. DomainHostHistory
+    3. DomainDnsInformation
+
+    Function later calls printing function to display all content
+
+    '''
+    domain = UserDomain.domain
 
     ColorPrint.print_bold("Printing Results for domain %s" % domain)
 
-    is_domain_available = domain_availability(domain)
+    is_domain_available = DomainAvailability(str(domain))
     response = is_domain_available.domain_available
     if isinstance(response, bool):
         if response:
@@ -83,10 +113,10 @@ def ProcessRequest():
     else:
         _info = "unable to find result."
 
-    ColorPrint.print_info("\nDomain Availability Result for %s : %s\n" % (domain, _info))
+    ColorPrint.print_info("Domain Availability Result for %s : %s" % (domain, _info))
 
-    dns_history = domain_host_history(domain)
-    __domain_history = json.loads(dns_history.domain_history)
+    dns_history = DomainHostHistory(str(domain))
+    __domain_history = dns_history.domain_history()
 
     if __domain_history:
         ColorPrint.print_info("DNS History Records")
@@ -107,17 +137,19 @@ def ProcessRequest():
             )
         print_table(table_data)
 
-    dns_information = DnsInformation(domain)
-    dns_records = dns_information.get_report()
+    dns_information = DomainDnsInformation(str(domain))
+    dns_records = dns_information.download_report()
 
     for dns_record in dns_records:
-        record = dns_records[dns_record]
-        print("")
-        ColorPrint.print_info(record["title"])
+        try:
+            record = dns_records[dns_record]
+            ColorPrint.print_info(record["title"])
 
-        records = record["records"]
+            records = record["records"]
+            print_table(dict_to_table(records))
+        except TypeError:
+            # @TODO: Check which kind of records are failing while converting into table and printing process
+            pass
 
-        print_table(dict_to_table(records))
 
-
-__all__ = ["UserDomain", "UserAgent", "ProcessRequest", "DnsInformation"]
+__all__ = ["UserDomain", "UserAgent", "process_request", "DomainHostHistory"]

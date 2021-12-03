@@ -1,12 +1,19 @@
 import os
 import argparse
+import time
 
 from core.resources import UserDomain
 from core.parser import ColorPrint
-from core import ProcessRequest
+from core import process_request as ProcessRequest
 
 
 def banner():
+    """
+    banner function is showing ascii art for project name. It contains Domain Trails and tag line for project
+    :return: strings for project banner.
+    :rtype: basestring
+    """
+
     banner_text = """
   -------------------------------------------------------------------------------
       ____                            _           ______              _  __     
@@ -24,6 +31,8 @@ def banner():
 if __name__ == '__main__':
     os.system("")
     ColorPrint.print_warn(banner())
+    # Just giving small amount of sleep before printing content on screen
+    time.sleep(.5)
     parser = argparse.ArgumentParser(description="Domain Trails, a project for domain information gathering from online"
                                                  "sources.")
     parser.add_argument("-d", dest="domain", required=True, type=str, help="Domain address for recon operation.")
@@ -32,5 +41,5 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     if args.domain:
-        UserDomain.DOMAIN = args.domain
+        UserDomain.domain = args.domain
     ProcessRequest()

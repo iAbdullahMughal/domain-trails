@@ -1,14 +1,30 @@
-import json
 import re
+
+from typing import Tuple
 
 
 class DnsHistoryParser:
+    """
+    Custom parser written for extracting data from html.
+    """
 
-    def __init__(self, html_content):
+    def __init__(self, html_content: str):
+        """
+        initiating function with some html content data
+        :param html_content: html data
+        :type html_content: str
+        """
         self.__html = html_content
 
     @staticmethod
-    def __ext_table_data__(web_content):
+    def __ext_table_data__(web_content: str) -> Tuple[list, int]:
+        """
+        This function extracts tables from html content, it creates a list and append all extracted tables in it.
+        :param web_content: string based html content
+        :type web_content:  str
+        :return html_tables, max_table_length: list of extracted tables, number of tables in table list
+        :rtype html_tables, max_table_length: list, int
+        """
         web_content = str(web_content)
         html_tables = []
         max_table_length = 0
@@ -40,8 +56,12 @@ class DnsHistoryParser:
             found_tables = re.search(html_table_regex, web_content, re.DOTALL)
         return html_tables, max_table_length
 
-    @property
-    def report(self):
+    def parse(self) -> list:
+        """
+        This functions invokes parsing of html content
+        :return: historical records against website
+        :rtype: object
+        """
         extracted_html_tables, max_len = self.__ext_table_data__(self.__html)
         history_data = []
         if len(extracted_html_tables) > 0:
@@ -83,8 +103,7 @@ class DnsHistoryParser:
                                 "month_year": str(extract_row_record[2]).lower().rstrip().strip(),
                                 "zone_date": str(extract_row_record[3]).lower().rstrip().strip(),
                                 "transaction": str(extract_row_record[4]).lower().rstrip().strip(),
-
                             }
                             history_data.append(host_record)
 
-        return json.dumps(history_data)
+        return history_data

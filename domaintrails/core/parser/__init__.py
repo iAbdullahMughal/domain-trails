@@ -126,7 +126,7 @@ class ColorPrint:
     @staticmethod
     def print_warn(message: str, end: str = '\n') -> None:
         """
-         Print text in warning color in console
+        Print text in warning color in console
         :param message: message which needs to be printed on console.
         :type message: str
         :param end: new line
@@ -139,7 +139,7 @@ class ColorPrint:
     @staticmethod
     def print_info(message: str, end: str = '\n') -> None:
         """
-         Print text in green color in console
+        Print text in green color in console
         :param message: message which needs to be printed on console.
         :type message: str
         :param end: new line
@@ -152,7 +152,7 @@ class ColorPrint:
     @staticmethod
     def print_bold(message: str, end: str = '\n') -> None:
         """
-         Print text in bold format in console
+        Print text in bold format in console
         :param message: message which needs to be printed on console.
         :type message: str
         :param end: new line

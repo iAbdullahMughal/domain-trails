@@ -8,7 +8,16 @@ gathering tool. This tool collect information related to urls.
 Working as educational project and trying to complete the project
 with native python code.
 
+Readme
+===========
+.. toctree::
+   :maxdepth: 2
+   :caption: Readme
 
+   readme
+
+Guide
+===========
 .. toctree::
    :maxdepth: 2
    :caption: Tutorial

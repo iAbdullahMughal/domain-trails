@@ -1,8 +1,7 @@
-domain-trails
-=============
+domaintrails
+============
 
 .. toctree::
    :maxdepth: 4
 
-   core
-   portal
+   domaintrails

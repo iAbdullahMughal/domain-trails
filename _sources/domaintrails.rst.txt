@@ -1,5 +1,5 @@
-core package
-============
+domaintrails package
+====================
 
 Subpackages
 -----------
@@ -7,16 +7,15 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
-   core.parser
-   core.recon
+   domaintrails.core
 
 Submodules
 ----------
 
-core.resources module
----------------------
+domaintrails.portal module
+--------------------------
 
-.. automodule:: core.resources
+.. automodule:: domaintrails.portal
    :members:
    :undoc-members:
    :show-inheritance:
@@ -24,7 +23,7 @@ core.resources module
 Module contents
 ---------------
 
-.. automodule:: core
+.. automodule:: domaintrails
    :members:
    :undoc-members:
    :show-inheritance:

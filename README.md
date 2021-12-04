@@ -18,14 +18,11 @@ Starting a simple project around information gathering related to domain / url /
 for educational means, so what is in this project right now ...
 
 ## ✨ Highlights
+
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![PyCharm](https://img.shields.io/badge/pycharm-143?style=for-the-badge&logo=pycharm&logoColor=black&color=black&labelColor=green)
 
-Read Docs 
-
-- https://readthedocs.org/projects/domain-trails/
-- https://iabdullahmughal.github.io/domain-trails/
-
+### Work completed
 
 Following services are supported
 
@@ -33,17 +30,27 @@ Following services are supported
 - 📜 Domain Hosting History (based on dns)
 - 📇️Domain DNS Information
 
+### Work in progress
 
-Work in progress 
 - 🔄 Whois information (include history)
 - 🔄 Web Technologies
 - 🔄 Information over internet
 
+## 🔽 Download and Install
+
+The recommended way to download and install/update the latest stable release of oletools is to use pip:
+
+- On Linux/Mac: ``sudo -H pip install -U domaintrails``
+- On Windows: ``pip install -U domaintrails``
+
+
 ## 📋 Output
+
 Following console output
-````commandline
-$ portal.py -d www.king.com
--------------------------------------------------------------------------------
+
+````shell
+$ domaintrails -d www.king.com
+  -------------------------------------------------------------------------------
       ____                            _           ______              _  __     
      / __ \ ____   ____ ___   ____ _ (_)____     /_  __/_____ ____ _ (_)/ /_____
     / / / // __ \ / __ `__ \ / __ `// // __ \     / /  / ___// __ `// // // ___/
@@ -121,5 +128,7 @@ king.com.  TXT   IN     86254  "v=spf1 include:spf1.king.com include:spf2.king.c
 
 ## Documentation
 
+You can find documents on following links
 
-### 🚧 Learning, searching, coding and hunting in progress ... 
+- https://readthedocs.org/projects/domain-trails/
+- https://iabdullahmughal.github.io/domain-trails/

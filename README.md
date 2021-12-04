@@ -40,8 +40,8 @@ Following services are supported
 
 The recommended way to download and install/update the latest stable release of oletools is to use pip:
 
-- On Linux/Mac: ``sudo -H pip install -U domaintrails``
-- On Windows: ``pip install -U domaintrails``
+- On Linux/Mac: ``sudo -H pip install -U domain-trails``
+- On Windows: ``pip install -U domain-trails``
 
 
 ## 📋 Output
@@ -130,5 +130,4 @@ king.com.  TXT   IN     86254  "v=spf1 include:spf1.king.com include:spf2.king.c
 
 You can find documents on following links
 
-- https://readthedocs.org/projects/domain-trails/
 - https://iabdullahmughal.github.io/domain-trails/

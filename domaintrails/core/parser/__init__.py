@@ -121,7 +121,7 @@ class ColorPrint:
         :rtype: None
         """
 
-        sys.stdout.write('\x1b[1;32m' + message.strip() + '\x1b[0m' + end)
+        sys.stdout.write('\n\x1b[1;32m' + message.strip() + '\x1b[0m' + end)
 
     @staticmethod
     def print_warn(message: str, end: str = '\n') -> None:
